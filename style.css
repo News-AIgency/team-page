@@ -169,6 +169,12 @@ body {
     border-radius: 50%;
     background: #ccc;
     margin: 0 auto 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .avatar img {
+    object-fit: cover;
   }
   
   .tags span {
