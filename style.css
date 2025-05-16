@@ -162,6 +162,10 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
+
+  .team-member h3 {
+    text-align: center;
+  }
   
   .avatar {
     width: 80px;
@@ -209,7 +213,13 @@ body {
     background: #fff;
   }
   
-  .docs h2 {
+.docs button {
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+  .docs h2, h3 {
     text-align: left;
     max-width: 960px;
     margin: 0 auto 1.5rem;
@@ -331,6 +341,7 @@ body {
 }
 
 .hero h1,
+.hero h2,
 .hero p,
 .hero .cta {
   opacity: 0;
@@ -341,10 +352,56 @@ body {
   animation-delay: 0.2s;
 }
 
+.hero h2 {
+  animation-delay: 0.4s;
+}
+
 .hero p {
   animation-delay: 0.6s;
 }
 
 .hero .cta {
   animation-delay: 1s;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 70em;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin: 5px;
+  align-content: start;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.collapsibleContent {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.collapsible:after {
+  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+.collapsible-wrapper {
+  max-width: 960px;  
+  margin: 0 auto;
+  justify-self: center;
 }
